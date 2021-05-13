@@ -33,10 +33,10 @@ const typeDefs = gql`
   }
   input SaveBookInput {
     authors: [String]
-    description: String! 
-    title: String! 
-    bookId: String! 
-    image: String 
+    description: String!
+    title: String!
+    bookId: String!
+    image: String
     link: String!
   }
 `;
