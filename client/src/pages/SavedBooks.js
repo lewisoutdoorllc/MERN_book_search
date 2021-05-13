@@ -57,7 +57,7 @@ const SavedBooks = () => {
 
     try {
       const { data } = await deleteBook({
-        variables: { bookId, token },
+        variables: { bookId },
       });
 
       //   Auth.login(data.addUser.token);
