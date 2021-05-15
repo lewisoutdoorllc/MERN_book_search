@@ -13,7 +13,7 @@ const SearchBooks = () => {
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
 
-  const [saveBook, {error}] = useMutation(SAVE_BOOK);
+  const [saveBook, { error }] = useMutation(SAVE_BOOK);
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
@@ -74,13 +74,13 @@ const SearchBooks = () => {
     //     throw new Error('something went wrong!');
     //   }
     try {
-      const {data} =  await saveBook({
-          variables:{ input: bookToSave }
-        });
+      const { data } = await saveBook({
+        variables: { input: bookToSave }
+      });
 
-        if (error) {
-          throw new Error('something went wrong!');
-        }
+      if (error) {
+        throw new Error('something went wrong!');
+      }
 
       console.log(data);
       // if book successfully saves to user's account, save book id to state
@@ -88,7 +88,7 @@ const SearchBooks = () => {
     } catch (err) {
       console.error(err);
     }
-    
+
   };
 
   return (
